@@ -4,7 +4,7 @@ hours_num = float(hours)
 rate_num = float(rate)
 
 
-def compute_pay (hours_num, rate_num):
+def full_hours_pay (hours_num, rate_num):
     if hours_num > 40 :
         reg = hours_num * rate_num
         otp = (hours_num - 40) * (rate_num * 0.5)
@@ -14,5 +14,5 @@ def compute_pay (hours_num, rate_num):
     print(pay)
 
 
-compute_pay(hours_num, rate_num)
+full_hours_pay(hours_num, rate_num)
 

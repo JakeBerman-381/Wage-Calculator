@@ -1,14 +1,18 @@
-full_hrs = None
-hrs_worked = input("Did you fulfill your 40 hours for the week? ")
+hours = input("How many hours did you work this week? ")
+rate = input("What is your hour wage? ")
+hours_num = float(hours)
+rate_num = float(rate)
 
-# function used to check if full work week fulfilled
-def reg_hrs():
-    if hrs_worked is "Yes":
-        full_hrs = 40
-    if hrs_worked is "No":
-        full_hrs = input("How many hours did you work? ")
 
-        
-        
+def compute_pay (hours_num, rate_num):
+    if hours_num > 40 :
+        reg = hours_num * rate_num
+        otp = (hours_num - 40) * (rate_num * 0.5)
+        pay = reg + otp
     else:
-        full_hrs = input()
+        pay = hours_num * rate_num
+    print(pay)
+
+
+compute_pay(hours_num, rate_num)
+
